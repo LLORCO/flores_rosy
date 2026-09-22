@@ -4,7 +4,7 @@ Regalito del día de las flores amarillas (21 de septiembre) para Rosy.
 
 Son dos pantallas: la primera dice **"Tu amorsote tiene un regalo para ti"** con un
 botón para abrirlo, y al tocarlo aparece un campo de girasoles con
-**"Feliz día de las flores amarillas"** y un vale por una mordida gratis.
+**"Feliz día de las flores amarillas"** y un vale por un beso gratis.
 
 Es un sitio estático sin dependencias ni build: solo HTML, CSS y un poco de
 JavaScript. Está pensado para verse en celular.
