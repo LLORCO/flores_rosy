@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fuente de og.jpg (1200×630)</title>
+<!--
+  Esta página existe solo para generar og.jpg, la miniatura que aparece
+  al compartir el link. Cómo regenerarla está explicado en el README.
+-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@600;800&display=swap">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(120% 90% at 30% 10%, #fffdf6 0%, #fff9ec 40%, #ffe6a0 100%);
+    color: #4a3418;
+    font-family: Nunito, sans-serif;
+  }
+
+  .text {
+    padding: 0 60px 40px 80px;
+    max-width: 720px;
+  }
+
+  .eyebrow {
+    font-family: Caveat, cursive;
+    font-size: 54px;
+    color: #8a5a30;
+  }
+
+  h1 {
+    margin: 4px 0 18px;
+    font-size: 84px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -.03em;
+  }
+
+  .day {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .72);
+    box-shadow: 0 8px 20px rgba(107, 68, 35, .12);
+    font-size: 28px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #8a5a30;
+  }
+
+  .heart {
+    position: absolute;
+    top: 56px;
+    right: 150px;
+    width: 270px;
+    filter: drop-shadow(0 22px 34px rgba(239, 93, 109, .3));
+  }
+
+  .heart path { fill: #ef5d6d; }
+
+  .flowers {
+    position: absolute;
+    right: 16px;
+    bottom: -95px;
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .flowers svg { width: 190px; }
+  .flowers svg:nth-child(1) { width: 150px; opacity: .8; }
+  .flowers svg:nth-child(3) { width: 165px; }
+</style>
+</head>
+<body>
+
+<div class="text">
+  <p class="eyebrow">Rosy, mi amorsota</p>
+  <h1>Tu amorsote tiene un regalo para ti</h1>
+  <p class="day">🌻 Día de las flores amarillas</p>
+</div>
+
+<svg class="heart" viewBox="0 0 120 100">
+  <path d="M60 88C60 88 22 64 22 42a19 19 0 0 1 38-8 19 19 0 0 1 38 8c0 22-38 46-38 46Z"/>
+</svg>
+
+<div class="flowers" id="flowers"></div>
+
+<script src="../sunflower.js"></script>
+<script>
+  // Reusa el mismo girasol del sitio para que la miniatura combine.
+  document.getElementById("flowers").innerHTML = [0, 1, 2].map(sunflowerSVG).join("");
+</script>
+</body>
+</html>
