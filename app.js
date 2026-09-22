@@ -138,7 +138,7 @@ window.addEventListener("hashchange", () => route(false));
 redeemBtn.addEventListener("click", () => {
   coupon.classList.add("is-redeemed");
   redeemBtn.disabled = true;
-  redeemBtn.textContent = "Mordida apartada";
+  redeemBtn.textContent = "Beso apartado";
   redeemStatus.textContent = CONFIG.mensajeCanjeado;
   drop(CONFIG.corazonesAlCanjear, "heart");
 });
